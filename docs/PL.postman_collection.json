@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "e3dbb327-3baa-4c0a-8145-4cfbb99a8aaf",
+		"name": "PL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List operational parameters by plant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/op/list/by-plant?plant_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"op",
+						"list",
+						"by-plant"
+					],
+					"query": [
+						{
+							"key": "plant_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all operational parameters Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/op",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"op"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Operational Parameter by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/op/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"op",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Operational Parameter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plant_id\": 1,\r\n    \"pressure\": 100.1,\r\n    \"flow\": 27.2,\r\n    \"level\": 56.7,\r\n    \"power\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/op/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"op",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
