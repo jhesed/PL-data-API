@@ -12,7 +12,14 @@ from .serializers import OperationalParametersSerializer
 @api_view(["POST"])
 @parser_classes([JSONParser])
 def create_operational_parameter(request):
-    serializer = OperationalParametersSerializer(data=request.data)
+    data = request.data
+    if isinstance(data, list):
+        serializer = OperationalParametersSerializer(
+            data=request.data, many=True
+        )
+    else:
+        serializer = OperationalParametersSerializer(data=request.data)
+
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=201)
