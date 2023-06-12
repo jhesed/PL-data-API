@@ -38,4 +38,4 @@ class OperationalParametersModel(models.Model):
     date_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return f"op {self.op_id}"

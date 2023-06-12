@@ -32,3 +32,7 @@ http://localhost:8000/admin
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+## Tests
+
+1. Pre-populate plant model first with some value so APIs won't return bad requests
