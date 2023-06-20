@@ -39,3 +39,6 @@ class OperationalParametersModel(models.Model):
 
     def __str__(self):
         return f"op {self.op_id}"
+
+    class Meta:
+        unique_together = [['plant_id', 'scada_datetime']]
